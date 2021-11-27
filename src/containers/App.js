@@ -6,6 +6,7 @@ import Scroll from "../components/Scroll";
 import ErrorBoundary from "../components/ErrorBoundary";
 import './App.css'
 import { requestRobots, setSearchField } from "../actions";
+import Header from "../components/Header";
 
 const mapStateToProps = state => {
     return {
@@ -36,7 +37,7 @@ const App = (props) => {
     return isPending?  (<h1>Loading...</h1>) :
         (
             <div className='tc'>
-                <h1 className='f2'>RoboFriends</h1>
+                <Header />
                 <button onClick={() => setCount(count + 1)}>Click Me!</button>
                 <SearchBox searchChange={onSearchChange} />
                 <Scroll>
